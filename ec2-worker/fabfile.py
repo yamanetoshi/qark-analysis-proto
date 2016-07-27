@@ -31,14 +31,8 @@ def setup():
     while True:
         # Fetch the next message and extract the S3 URL to fetch the POV-Ray source ZIP from.
         print "Fetching messages fom SQS queue: ${queue}..."
-        queues = conn.get_all_queues()
+        q = boto.sqs.queue.Queue(conn, queue)
 
-        # if queue is null then break
-        if (len(queues) == 0):
-            print "No messages left in queue. Exiting."
-            break
-
-        q = queues[0]
         rs = q.get_messages()
         if (len(rs) == 0):
             if (retry > 5):
