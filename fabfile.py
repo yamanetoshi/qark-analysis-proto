@@ -49,7 +49,7 @@ ECS_TASK_NAME = APP_NAME + 'Task'
 
 # Constants (OS specific)
 USER = os.environ['HOME'].split('/')[-1]
-AWS_BUCKET = USER + BUCKET_POSTFIX
+AWS_BUCKET = APP_NAME + BUCKET_POSTFIX
 AWS_CONFIG_FILE_NAME = os.environ['HOME'] + '/.aws/config'
 AWS_CREDENTIAL_FILE_NAME = os.environ['HOME'] + '/.aws/credentials'
 
