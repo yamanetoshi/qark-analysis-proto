@@ -7,4 +7,4 @@ RUN pip install fabric
 RUN pip install boto
 WORKDIR /tmp
 
-ENTRYPOINT [ "fab" "setup" ]
+ENTRYPOINT [ "/usr/local/bin/fab", "setup" ]
