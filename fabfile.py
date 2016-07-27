@@ -66,7 +66,7 @@ MEMORY = 512
 ZIPFILE_NAME = LAMBDA_FUNCTION_NAME + '.zip'
 
 BUCKET_PERMISSION_SID = APP_NAME + 'Permission'
-WAIT_TIME = 5  # seconds to allow for eventual consistency to kick in.
+WAIT_TIME = 10  # seconds to allow for eventual consistency to kick in.
 RETRIES = 5  # Number of retries before we give up on something.
 
 # Templates and embedded scripts
